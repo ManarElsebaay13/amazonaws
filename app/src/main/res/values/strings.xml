@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">amazonaws</string>
+    <string name="no_result">No Data</string>
+    <string name="no_internet">No internet Connection</string>
+    <string name="product_details">Product Details</string>
+    <string name="no_data">Sorry , There is No Data</string>
+</resources>

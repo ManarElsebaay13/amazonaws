@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="baseViewModel"
+            type="com.manarelsebaay.amazonaws.presentation.base.BaseViewModel" />
+
+        <import type="com.manarelsebaay.amazonaws.core.utils.DataStatus"/>
+
+        <import type="android.view.View"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:id="@+id/no_data_layout"
+            tools:ignore="UseCompoundDrawables"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                app:srcCompat="@drawable/nodata"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:fontFamily="@font/play_fair_display_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:gravity="center"
+                android:text="@string/no_data"
+                android:textColor="@color/black"
+                />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:visibility="gone"
+            android:padding="@dimen/_10sdp"
+            />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            style="@style/SpinKitView.Large.CubeGrid"
+            android:id="@+id/spinkit_progress"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:SpinKit_Color="@color/colorPrimary"
+            />
+
+    </LinearLayout>
+
+
+</layout>

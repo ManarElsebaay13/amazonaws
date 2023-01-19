@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.manarelsebaay.amazonaws.presentation.fragments.home.HomeViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundGray"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:padding="@dimen/_10sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/amazon"
+            />
+
+        <include
+            android:id="@+id/home_list"
+            layout="@layout/home_list"
+            />
+
+    </LinearLayout>
+
+    </layout>
